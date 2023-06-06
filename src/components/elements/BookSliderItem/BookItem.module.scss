@@ -1,0 +1,66 @@
+.card {
+    width: fit-content;
+    // width: 185px;
+    // height: 352px;
+    padding: 25px;
+    background-color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    // font-family: 'Montserrat';
+    // font-weight: 700;
+    // font-size: 18px;
+    color: #241400;
+    display: flex;
+    flex-direction: column;
+
+    &__price {
+        font-weight: bolder;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        color: #241400;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 196.19%;
+        color: #241400;
+    }
+
+    &__author {
+        font-weight: 400;
+        font-size: 12px;
+        color: #241400;
+    }
+
+    &__info {}
+
+    &__footer {
+        display: flex;
+        gap: 4px;
+    }
+}
+
+.image {
+    // width: 134.23px;
+    // height: 190px;
+}
+
+.imgBlock {
+    // display: flex;
+    align-self: center;
+}
+
+.likeSvg {
+    & .color {
+        fill: red;
+    }
+
+    &:hover {
+        // transition: all 0.3;
+        // fill: red;
+        // width-stroke: 20;
+        // stroke: "green"
+
+    }
+}

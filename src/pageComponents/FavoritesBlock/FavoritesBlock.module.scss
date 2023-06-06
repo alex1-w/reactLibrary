@@ -1,0 +1,112 @@
+.favoriteBlock {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: fit-content;
+    gap: 30px;
+    margin: 0 auto;
+    // padding: 20px;
+    margin-top: 20px;
+
+    @media screen and (max-width:1400px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media screen and (max-width:1200px) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 80px;
+    }
+
+    @media screen and (max-width:1000px) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    @media screen and (max-width:850px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 70px;
+    }
+
+    @media screen and (max-width:650px) {
+        gap: 40px;
+    }
+
+    @media screen and (max-width:430px) {
+        padding: 0;
+        gap: 50px;
+    }
+    @media screen and (max-width:350px) {
+        gap: 10px;
+    }
+}
+
+.main {
+    width: 40vw;
+    max-width: 250px;
+    // border: 1px solid red;
+
+    @media screen and (max-width:400px) {
+        width: 40vw;
+        width: 130px;
+    }
+}
+
+.wrapper {
+    padding: 10px;
+    height: 40vh;
+    max-height: 350px;
+    // border: 2.5px solid gray;
+    // box-shadow: 0 0 10px 10px rgba(128, 128, 128, 0.358);
+    box-shadow: inset 0px 0px 14px rgba(42, 9, 9, 0.9);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.sum {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.imgBlock {
+    align-self: center;
+
+    & img {
+        width: 100px;
+    }
+}
+
+.description {
+
+    & h3 {
+        font-size: 19px;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    &__autorBlock {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+
+        & p {
+            font-style: 17px;
+            height: fit-content;
+            justify-content: end;
+            line-height: 100%;
+        }
+    }
+}
+
+.cardFooter {
+    display: flex;
+    justify-content: space-around;
+
+    @media screen and (max-width:370px) {
+        align-items: center;
+        flex-direction: column;
+    }
+}

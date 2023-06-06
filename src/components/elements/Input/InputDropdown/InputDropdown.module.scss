@@ -1,0 +1,41 @@
+.main {}
+
+.bookList {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    gap: 5px;
+
+    & p {
+        // color: #fff;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    & li {
+        padding: 7px;
+        border-radius: 7px;
+        border: 1px solid transparent;
+        transition: all 0.3s;
+
+        &:hover {
+            transition: all 0.3s;
+            border: 1px solid rgb(0, 0, 0);
+            background-color: #0467ad81;
+        }
+    }
+}
+
+.bookItem {
+    border: 1px solid red;
+    border: 1px solid transparent;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.bookItem {}

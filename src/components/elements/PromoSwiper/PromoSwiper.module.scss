@@ -1,0 +1,47 @@
+.main {
+    position: relative;
+    width: fit-content;
+}
+
+.swiperBlock {
+    overflow: hidden;
+    max-width: 500px;
+    position: absolute;
+    left: -45px;
+    top: 10%;
+    // border: 1px solid red;
+}
+
+.swipeItem {
+    width: fit-content;
+
+}
+
+.back {
+    width: 600px;
+}
+
+///////////////////////////////////////
+/// 
+
+@media screen and (max-width:700px) {
+    .main {
+        max-width: 90vw;
+        width: fit-content;
+    }
+
+    .swiperBlock {
+        border: 1px solid red;
+        max-width: 90vw;
+    }
+
+    .swipeItem {
+        & img {
+            width: 80vw;
+        }
+    }
+
+    .back {
+        width: 80vw;
+    }
+}

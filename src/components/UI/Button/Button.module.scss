@@ -1,0 +1,26 @@
+.main {
+    width: fit-content;
+    height: fit-content;
+    background-color: #E16A00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &.btnLink {
+        padding: 12px 24px;
+    }
+
+    &.bookSliderItemBtn {
+        padding: 10px 11px;
+        border-radius: 7px;
+    }
+
+    & p {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 15px;
+        color: #FFFFFF;
+        line-height: normal;
+    }
+}

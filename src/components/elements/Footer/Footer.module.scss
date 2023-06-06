@@ -1,0 +1,181 @@
+footer {
+    background-color: #391F00;
+    height: 276px;
+    @media screen and (max-width:320px) {
+        height: 320px;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.info {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mainInfo {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+
+    &__item {
+
+        &__liText {
+            color: white;
+        }
+
+        & h4 {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 196.19%;
+            color: #FFFFFF;
+        }
+
+        & ul {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            color: #FFFFFF;
+            line-height: 35px;
+        }
+    }
+}
+
+.logoBlock {
+
+    & img {
+        width: 42px;
+        height: 32.79px;
+    }
+}
+
+.logoText {
+
+    &__secondText {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 196.19%;
+        color: #241400;
+    }
+
+    &__bible {
+        border-bottom: 2px solid gray;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 14px;
+        line-height: 17px;
+        color: #4D2900;
+    }
+}
+
+.phoneCall {
+
+    & p {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 12px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    & button {
+        background-color: inherit;
+        border: 2px solid #E16A00;
+        padding: 4px 8px;
+        transition: all 0.3s;
+
+        &:hover {
+            transition: all 0.3s;
+            background-color: rgb(161, 110, 0);
+        }
+
+        & p {
+            transition: all 0.3s;
+            color: #E16A00;
+
+            &:hover {
+                transition: all 0.3s;
+                color: #241400;
+            }
+        }
+    }
+}
+
+.rights {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+
+    & p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        color: #FFFFFF;
+    }
+}
+
+/////////////////////////////////////////////////////////////////
+
+@media screen and (max-width: 900px) {
+    .info {
+        display: grid;
+        grid-template-areas: "logoBlock . . phoneCall"
+            "mainInfo mainInfo mainInfo mainInfo";
+
+        &__item {}
+    }
+
+    .logoBlock {
+        grid-area: logoBlock;
+    }
+
+    .mainInfo {
+        grid-area: mainInfo;
+        width: 100%;
+        justify-self: start;
+    }
+
+    .phoneCall {
+        grid-area: phoneCall;
+    }
+}
+
+/////////////////////////////////////////////////////////////////
+
+
+@media screen and (max-width: 400px) {
+
+    body::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+
+        &__item {}
+    }
+
+    .logoBlock {}
+
+    .mainInfo {
+        display: none;
+    }
+
+    .phoneCall {}
+
+    .rights {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

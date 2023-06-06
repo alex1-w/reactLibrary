@@ -1,0 +1,13 @@
+.main {
+    min-height: 80vh;
+    border: 1px solid red;
+}
+
+.content {
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid red;
+    & h1{
+        text-align: center;
+    }
+}

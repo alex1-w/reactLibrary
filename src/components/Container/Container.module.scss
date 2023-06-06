@@ -1,0 +1,15 @@
+.container {
+    display: block;
+    // width: 100%;
+    // width: calc(100vw - scrollWidth);
+    // width: calc(100vw - (100vw - 100%));
+
+    max-width: 1600px;
+    // width: 100vw;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @media screen and (max-width:1100px) {
+        padding: 0;
+    }
+}

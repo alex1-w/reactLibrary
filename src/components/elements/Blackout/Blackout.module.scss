@@ -1,0 +1,28 @@
+.blackout {
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.443);
+
+}
+
+.blackoutContent {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 6;
+    // width: 400px;
+    height: fit-content;
+    background-color: white;
+    border-radius: 15px;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+}
