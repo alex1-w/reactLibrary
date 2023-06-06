@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/reactLibrary/static/css/main.91e02916.css",
+    "main.js": "/reactLibrary/static/js/main.6c315a24.js",
+    "static/js/787.28cb0dcd.chunk.js": "/reactLibrary/static/js/787.28cb0dcd.chunk.js",
+    "static/media/sliderThreeItem.png": "/reactLibrary/static/media/sliderThreeItem.cfa0e96bbe3975a38c95.png",
+    "static/media/piano.jpg": "/reactLibrary/static/media/piano.0e5851ca2f5e3160631c.jpg",
+    "static/media/book4.png": "/reactLibrary/static/media/book4.3cc8609347f01116073c.png",
+    "static/media/book3.png": "/reactLibrary/static/media/book3.edd943db218ae66873c2.png",
+    "static/media/book5.png": "/reactLibrary/static/media/book5.c98b5f4d5cd260a4d2cf.png",
+    "static/media/book1.png": "/reactLibrary/static/media/book1.298b06a7b0cc306eb093.png",
+    "static/media/book6.png": "/reactLibrary/static/media/book6.d96c4a0d05ab6320607f.png",
+    "static/media/background.png": "/reactLibrary/static/media/background.de3ea5bd098d3c46cb26.png",
+    "index.html": "/reactLibrary/index.html",
+    "main.91e02916.css.map": "/reactLibrary/static/css/main.91e02916.css.map",
+    "main.6c315a24.js.map": "/reactLibrary/static/js/main.6c315a24.js.map",
+    "787.28cb0dcd.chunk.js.map": "/reactLibrary/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.91e02916.css",
+    "static/js/main.6c315a24.js"
+  ]
+}
