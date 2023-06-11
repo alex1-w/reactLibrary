@@ -2,6 +2,7 @@ import { FC, useState } from "react";
 import { INavLink } from "../Navigation";
 import { AnimatePresence, motion } from 'framer-motion'
 import styles from './NavItem.module.scss'
+import { NavLink } from "react-router-dom";
 // import {}
 
 
@@ -13,17 +14,19 @@ export const NavItem: FC<INavProps> = ({ link }) => {
 
     const [isOpenDropdown, setIsOpenDropdown] = useState<boolean>(false)
 
-
     return (
         <motion.li
-        className={styles.liBlock}
+            className={styles.liBlock}
             whileHover={{ scale: 1.3 }}
             onMouseEnter={() => setIsOpenDropdown(true)}
             onMouseLeave={() => setIsOpenDropdown(false)}
         >
-            <a href={link.link}>
+            <NavLink
+                to={link.link}
+                className={({ isActive }) => isActive ? 'active' : ''}
+            >
                 <p>{link.name}</p>
-            </a>
+            </NavLink>
 
             <AnimatePresence>
                 {isOpenDropdown &&

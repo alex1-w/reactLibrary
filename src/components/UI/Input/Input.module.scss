@@ -1,0 +1,89 @@
+.main {
+    position: relative;
+}
+
+.inputBlock {
+    display: flex;
+    align-items: center;
+    padding: 3px;
+
+    & input {
+        transition: 0.3s;
+        padding: 4px;
+        background-color: inherit;
+        border: none;
+        border-bottom: 1.4px solid #6967648e;
+        height: 20px;
+        width: 200px;
+        font-size: 16px;
+    }
+
+    &:hover {
+        border: none;
+        transition: 0.3s;
+        border-radius: 6px;
+        background-color: white;
+        // border: 1px solid rgb(220, 150, 22);
+    }
+
+    @media screen and (max-width:700px) {
+        display: none;
+    }
+}
+
+.inputDropdown {
+    position: absolute;
+    width: fit-content;
+    top: 60px;
+    left: 8px;
+    padding: 4px;
+    border-radius: 5px;
+    border: 3px solid rgb(0, 214, 186);
+    background-color: #bebebe;
+    box-shadow: 0 0 3px #e6e6e6;
+    z-index: 10;
+    max-height: 430px;
+    overflow: hidden;
+    overflow-y: scroll;
+    transition: height 0.5s;
+    visibility: visible;
+
+    // &.opened {
+    //     transition: height 0.5s;
+    //     visibility: visible;
+    // }
+}
+
+////////////////////////////////////////////////////////////////
+.main {
+    position: relative;
+    // border: 1px solid rgb(255, 0, 149);
+    height: fit-content;
+
+}
+
+.inputBlock {
+
+    & input {
+        transition: 0.3s;
+        padding: 4px;
+        background-color: inherit;
+        border: none;
+        border-bottom: 1.4px solid #6967648e;
+        height: 20px;
+        width: 200px;
+        font-size: 16px;
+    }
+
+    &:hover {
+        border: none;
+        transition: 0.3s;
+        border-radius: 6px;
+        background-color: white;
+        // border: 1px solid rgb(220, 150, 22);
+    }
+
+    @media screen and (max-width:700px) {
+        display: none;
+    }
+}

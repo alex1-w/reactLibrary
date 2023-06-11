@@ -17,7 +17,7 @@ export const Footer = () => {
                         </div>
                         <div className={styles.logoText}>
                             <p className={styles.logoText__bible}>БИБЛИОТЕЧНАЯ</p>
-                            <p className={styles.secondText}>книжный магазин</p>
+                            <p className={styles.logoText__secondText}>книжный магазин</p>
                         </div>
                     </div>
 

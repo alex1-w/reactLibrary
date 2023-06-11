@@ -12,8 +12,7 @@ const arrowRight =
 
 
 export const FavoritesDropdown: FC = () => {
-    const { user} = useContext(UserContext)
-    const [mouseEvent, setMouseEvent] = useState<boolean>(false)
+    const { user } = useContext(UserContext)
 
     return (
         <AnimatePresence>
@@ -27,6 +26,11 @@ export const FavoritesDropdown: FC = () => {
                 {user.favorites.length ?
 
                     <div className={styles.wrapper}>
+
+                        <Link className={styles.restFavoritesBlock__restFavorites} to={`/favorites`}>
+                            <div>  <motion.p whileHover={{ color: 'red' }}> смотреть все</motion.p></div>
+                        </Link>
+
                         <ul className={styles.bookList}>
                             {user.favorites.slice(0, 7).map(book => (
 
@@ -44,19 +48,6 @@ export const FavoritesDropdown: FC = () => {
 
                             ))}
                         </ul>
-                        {user.favorites.length > 7 &&
-                            <motion.div
-                                className={styles.restFavoritesBlock}
-                                whileHover={{ scale: 1.1 }}
-                            >
-                                <Link className={styles.restFavoritesBlock__restFavorites} to={`/favorites`}>
-                                    <div>
-                                        <p> и еще {user.favorites.length - 7} в избранном</p>{arrowRight}
-                                    </div>
-                                </Link>
-                            </motion.div>
-
-                        }
                     </div>
                     :
                     <p>пусто</p>

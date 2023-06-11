@@ -8,11 +8,11 @@ export const Layout = () => {
     return (
         <>
             <Header />
-            <Container>
+            {/* <Container> */}
 
                 <Outlet />
 
-            </Container>
+            {/* </Container> */}
             <Footer />
         </>
 

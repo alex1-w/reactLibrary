@@ -20,10 +20,10 @@ export const BurgerMenu = () => {
     return (
         <>
             {isMenuOpened && <Blackout />}
-            <div className={styles.main} onClick={() => { openMenu() }} >
+            <div className={styles.main} onClick={() => { openMenu() }} ref={disableMiddleSpan}>
 
                 <span></span>
-                <span ref={disableMiddleSpan}></span>
+                <span></span>
                 <span></span>
 
             </div>

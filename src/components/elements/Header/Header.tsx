@@ -1,15 +1,14 @@
 import styles from './Header.module.scss';
 import logo from '../../images/logo.png';
 import { useContext, useState } from "react"
-import { BsSearch } from "react-icons/bs"
 import { Navigation } from '../Navigation/Navigation';
 import { LogIn } from '../LogIn/LogIn';
 import { Blackout } from '../Blackout/Blackout';
 import { BurgerMenu } from '../../UI/BurgerMenu/BurgerMenu';
 import { UserAccount } from '../UserAccount/UserAccount';
 import { UserContext } from '../../../providers/UserProvider';
-import { Input } from '../Input/Input';
-import { Container } from '../../Container/Container';
+import { Input } from '../../UI/Input/Input';
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
     const { isLogin } = useContext(UserContext)
@@ -22,7 +21,7 @@ export const Header = () => {
             <div className={styles.wrapper}>
 
                 <div className={styles.logoBlock}>
-                    <a href='/' className={styles.logoBlock__logo}>
+                    <Link to={`/`} className={styles.logoBlock__logo}>
                         <div>
                             <img src={logo} alt="logo" />
                         </div>
@@ -30,7 +29,7 @@ export const Header = () => {
                             <p className={styles.logoText__bible}>БИБЛИОТЕЧНАЯ</p>
                             <p className={styles.secondText}>книжный магазин</p>
                         </div>
-                    </a>
+                    </Link>
                 </div>
 
                 <Navigation />

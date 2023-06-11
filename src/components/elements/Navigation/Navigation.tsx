@@ -10,23 +10,23 @@ export interface INavLink {
 export const navLinks: INavLink[] = [
     {
         name: 'Акции',
-        link: '/'
+        link: '/discount'
     },
     {
         name: 'Каталог',
-        link: '/'
+        link: '/catalog'
     },
     {
         name: 'Доставка',
-        link: '/'
+        link: '/delivery'
     },
     {
         name: 'О магазине',
-        link: `/`
+        link: `/about`
     },
     {
         name: "Блог",
-        link: `/`
+        link: `/blog`
     }
 ]
 

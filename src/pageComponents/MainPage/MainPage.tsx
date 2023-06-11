@@ -1,13 +1,12 @@
 import styles from './MainPage.module.scss'
-import { Button } from '../../components/UI/Button/Button'
 import { motion } from 'framer-motion'
 import { Tooltip as Socialtooltip } from 'react-tooltip'
 import { Fragment } from 'react'
 import { catalog, socialLinks, reciepts, aboutStore } from '../../data/MainPage.data'
-import promoSliderItem from '../../components/images/sliderThreeItem.png'
 import { Slider } from '../../components/elements/Slider/Slider'
 import { Container } from '../../components/Container/Container'
 import { PromoSwiper } from '../../components/elements/PromoSwiper/PromoSwiper'
+import { Link } from 'react-router-dom'
 
 export const MainPage = () => {
 
@@ -20,7 +19,9 @@ export const MainPage = () => {
                     <div className={styles.promo__text}>
                         <h1>Книги от А до Я</h1>
                         <p className={styles.promo__subtext}>В нашем магазине можно найти книгу на любой вкус. Большой ассортимент. Приятные цены. Интересные сюжеты.</p>
-                        <Button name='Перейти в каталог' link='/' variant='btnLink' />
+                        <Link to={`/catalog`} className={styles.catalogBtn}>
+                            <p>Перейти в каталог</p>
+                        </Link>
                     </div>
 
                     <div className={styles.promo__slider}>

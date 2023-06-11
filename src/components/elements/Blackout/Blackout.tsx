@@ -11,7 +11,7 @@ export const Blackout = ({ children }: BlackoutProps) => {
     return (
         <AnimatePresence>
 
-            <div>
+            <div className={styles.main}>
                 <motion.div
                     initial={{ x: 1000 }}
                     animate={{ x: 0 }}

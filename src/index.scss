@@ -16,9 +16,15 @@ body {
 
 
 
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+  }
 
 
-  
   // & ::-webkit-scrollbar-thumb {
   //   // width: 3px;
   //   // height: 5px;
@@ -26,8 +32,16 @@ body {
   //   border: #241400 solid 1px;
   //   border-radius: 14px;
   // }
-  
+
 }
+
+.active {
+  & p {
+    border-bottom: 1.5px solid rgb(94, 94, 94);
+    // color: red !important;
+  }
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

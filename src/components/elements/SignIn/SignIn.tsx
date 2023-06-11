@@ -40,7 +40,7 @@ export const SignIn = () => {
             cart: [],
         }
 
-        usersArray.push(userBody)        
+        usersArray.push(userBody)
         localStorage.setItem('users', JSON.stringify(usersArray))
         setFormState({
             name: '',
@@ -57,7 +57,7 @@ export const SignIn = () => {
 
                 <input type="text" onChange={changeHandler} value={formState.name} name='name' placeholder='name' />
                 <input type="password" onChange={changeHandler} value={formState.password} name='password' placeholder='password' />
-                <input type="password" onChange={changeHandler} value={formState.repeatPassword} name='repeatPassword' placeholder='repeat password'/>
+                <input type="password" onChange={changeHandler} value={formState.repeatPassword} name='repeatPassword' placeholder='repeat password' />
 
                 <button className={styles.enterBtn} onClick={signIn}>ENTER</button>
 

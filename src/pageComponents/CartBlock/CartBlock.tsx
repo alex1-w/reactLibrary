@@ -1,19 +1,29 @@
-import { FC, useContext } from 'react'
+import { FC, useContext, useEffect, useState } from 'react'
 import styles from './CartBlock.module.scss'
 import { UserContext } from '../../providers/UserProvider'
-import { BookItem } from '../../components/elements/BookItem/BookItem'
 import { Container } from '../../components/Container/Container'
 import { CartBookItem } from '../../components/elements/CartBookItem/CartBookItem'
+import { IBook } from '../../types/IBookItem'
 
 export const CartBlock: FC = () => {
     const { user } = useContext(UserContext)
-    // console.log(user.cart);
+    const [page, setPage] = useState<IBook[]>([])
 
 
     const amount = user.cart.reduce((total, nextPrice) => total + nextPrice.price, 0)
 
+    useEffect(() => { setPage(user.cart.slice(0, 5)) }, [])
 
-    // console.log(user.cart);
+    const bookInPage = 5
+
+    const bookSlice = (index: number) => {
+        const books = user.cart.slice(index * bookInPage, index * bookInPage + bookInPage);
+        setPage(books)
+        // console.log(books);
+        console.log(Math.round(user.cart.length / 5));
+        console.log(user.cart.length);
+
+    }
 
     return (
         <Container>
@@ -25,7 +35,7 @@ export const CartBlock: FC = () => {
 
                 <div className={styles.wrapper}>
 
-                    {user.cart.length > 0 ? user.cart.map(book => (
+                    {user.cart.length > 0 ? page.map(book => (
                         // <BookItem book={book} key={book.id} />
                         <CartBookItem book={book} key={book.id} />
                     )) :
@@ -33,9 +43,20 @@ export const CartBlock: FC = () => {
                             <p>Пусто</p>
                         </div>
                     }
-
                 </div>
+
+                {/* /////////////////////////тута правильно а????///////////////////////////////// */}
+                {user.cart.length > 5 ?
+                    <div className={styles.paginate}>
+                        {user.cart.slice(0, Math.ceil(user.cart.length / 5)).map((item, index) => (
+                            <div onClick={() => bookSlice(index)} key={index}>
+                                {index + 1}
+                            </div>
+                        ))}
+                    </div>
+                    : null}
             </section>
-        </Container>
+
+        </Container >
     )
 }

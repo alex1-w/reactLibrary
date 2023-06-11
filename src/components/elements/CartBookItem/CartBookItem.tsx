@@ -1,7 +1,6 @@
 import styles from './CartBookItem.module.scss'
 import { FC } from 'react'
 import { motion } from 'framer-motion';
-import { Button } from "../../UI/Button/Button"
 import { IBook } from '../../../types/IBookItem';
 
 
@@ -15,7 +14,13 @@ export const CartBookItem: FC<{ book: IBook }> = ({ book }) => {
 
     return (
         <div className={styles.main}>
-            <div className={styles.wrapper}>
+            <motion.div
+                // initial={{ boxShadow: 'inset 0px 0px 14px rgba(139, 139, 139, 0.9)' }}
+                // animate={{ boxShadow: '3px 3px 3px 3px rgba(0,0,0,0.3)' }}
+                transition={{ delay: 0.1 }}
+                whileHover={{ boxShadow: '3px 3px 3px 3px rgba(0,0,0,0.3)', backgroundColor: '' }}
+                className={styles.wrapper}
+            >
 
                 <div className={styles.imgBlock}>
                     <img src={book.image} alt={book.title} />
@@ -47,7 +52,7 @@ export const CartBookItem: FC<{ book: IBook }> = ({ book }) => {
                     </div>
                 </div>
 
-            </div>
+            </motion.div>
         </div >
     )
 }

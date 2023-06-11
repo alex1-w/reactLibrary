@@ -1,15 +1,13 @@
 .main {
-    width: 40vw;
-    max-width: 250px;
+    // width: 40vw;
+    // max-width: 250px;
 }
 
 .wrapper {
     padding: 10px;
-    height: 40vh;
-    max-height: 350px;
-    // border: 2.5px solid gray;
-    // box-shadow: 0 0 10px 10px rgba(128, 128, 128, 0.358);
-    box-shadow: inset 0px 0px 14px rgba(42, 9, 9, 0.9);
+    width: 200px;
+    height: 300px;
+    box-shadow: inset 0px 0px 14px rgba(139, 139, 139, 0.9);
     border-radius: 10px;
     display: flex;
     flex-direction: column;

@@ -1,20 +1,19 @@
 footer {
     background-color: #391F00;
-    height: 276px;
-    @media screen and (max-width:320px) {
-        height: 320px;
-    }
+    width: 100%;
+    @media screen and (max-width:320px) {}
 }
 
 .wrapper {
+    height: 216px;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-top: 60px;
+    // padding-bottom: 25px;
 }
 
 .info {
-    margin-top: 30px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -22,8 +21,7 @@ footer {
 
 .mainInfo {
     display: flex;
-    width: 50%;
-    justify-content: space-around;
+    gap: 90px;
 
     &__item {
 
@@ -50,10 +48,18 @@ footer {
 }
 
 .logoBlock {
+    display: flex;
+    align-items: center;
+    gap: 4px;
 
     & img {
         width: 42px;
         height: 32.79px;
+    }
+
+    & p {
+        line-height: 100%;
+        color: white;
     }
 }
 
@@ -78,6 +84,7 @@ footer {
 }
 
 .phoneCall {
+    // border: 3px solid red;
 
     & p {
         font-style: normal;
@@ -93,27 +100,31 @@ footer {
         padding: 4px 8px;
         transition: all 0.3s;
 
-        &:hover {
-            transition: all 0.3s;
-            background-color: rgb(161, 110, 0);
-        }
-
         & p {
             transition: all 0.3s;
             color: #E16A00;
+            line-height: 100%;
+            font-size: 12px;
+            font-weight: 500;
+        }
 
-            &:hover {
+        &:hover {
+            transition: all 0.3s;
+            background-color: rgb(161, 110, 0);
+
+            & p {
                 transition: all 0.3s;
                 color: #241400;
             }
         }
+
     }
 }
 
 .rights {
     display: flex;
-    justify-content: center;
-    gap: 80px;
+    justify-content: space-around;
+    // border: 3px solid red;
 
     & p {
         font-style: normal;
@@ -126,9 +137,15 @@ footer {
 /////////////////////////////////////////////////////////////////
 
 @media screen and (max-width: 900px) {
+    .wrapper {
+        padding-top: 10px;
+        height: auto;
+    }
+
     .info {
         display: grid;
-        grid-template-areas: "logoBlock . . phoneCall"
+        grid-template-areas:
+            "logoBlock logoBlock phoneCall phoneCall"
             "mainInfo mainInfo mainInfo mainInfo";
 
         &__item {}
@@ -136,46 +153,99 @@ footer {
 
     .logoBlock {
         grid-area: logoBlock;
+        width: 200px;
     }
 
     .mainInfo {
         grid-area: mainInfo;
-        width: 100%;
-        justify-self: start;
     }
 
     .phoneCall {
+        max-width: 150px;
         grid-area: phoneCall;
+        justify-self: end;
+        align-self: start;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 200px;
+    }
+
+    .rights {
+        grid-area: rights;
+
+        @media screen and (max-width: 700px) {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            height: fit-content;
+        }
     }
 }
 
 /////////////////////////////////////////////////////////////////
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 610px) {
+    .wrapper {
+        padding: 20px 5px;
+    }
 
-    body::-webkit-scrollbar {
-        width: 0;
+    .info {}
+
+    .logoBlock {
+        width: 130px;
+    }
+
+    .mainInfo {}
+
+    .phoneCall {
+        width: 120px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        & button {
+            & p {
+                line-height: 100%;
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .rights {}
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media screen and (max-width: 535px) {
+    .wrapper {
+        padding: 10px 5px;
+        display: flex;
+        flex-direction: column;
     }
 
     .info {
         display: flex;
         flex-direction: column;
-
-        &__item {}
+        justify-content: center;
     }
 
-    .logoBlock {}
+    .logoBlock {
+        width: 130px;
+    }
 
     .mainInfo {
         display: none;
     }
 
-    .phoneCall {}
+    .phoneCall {
+        align-self: center;
+    }
 
     .rights {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        margin-top: 10px;
+        text-align: center;
     }
 }

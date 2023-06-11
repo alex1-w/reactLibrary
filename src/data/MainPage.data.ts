@@ -120,7 +120,7 @@ export const booksData = [
         author: 'Керстин Гир',
         image: bookImageTwo,
         price: 740,
-        categoryId: 7,
+        categoryId: 2,
         description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate saepe dignissimos ut, ducimus necessitatibus at vitae reiciendis. Cumque veniam nulla provident aut omnis laudantium ipsa temporibus iure at. Consectetur, nobis!'
     },
     {
@@ -129,7 +129,7 @@ export const booksData = [
         author: 'Агнешка Тишка',
         image: bookImageTwree,
         price: 290,
-        categoryId: 4,
+        categoryId: 3,
         description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate saepe dignissimos ut, ducimus necessitatibus at vitae reiciendis. Cumque veniam nulla provident aut omnis laudantium ipsa temporibus iure at. Consectetur, nobis!'
     },
     {
@@ -138,7 +138,7 @@ export const booksData = [
         author: 'Наталья Зотова',
         image: bookImageFour,
         price: 900,
-        categoryId: 3, description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate saepe dignissimos ut, ducimus necessitatibus at vitae reiciendis. Cumque veniam nulla provident aut omnis laudantium ipsa temporibus iure at. Consectetur, nobis!'
+        categoryId: 4, description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate saepe dignissimos ut, ducimus necessitatibus at vitae reiciendis. Cumque veniam nulla provident aut omnis laudantium ipsa temporibus iure at. Consectetur, nobis!'
 
     },
     {
@@ -147,7 +147,7 @@ export const booksData = [
         author: 'Михаил Бурняшев',
         image: bookImageFive,
         price: 780,
-        categoryId: 2, description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate saepe dignissimos ut, ducimus necessitatibus at vitae reiciendis. Cumque veniam nulla provident aut omnis laudantium ipsa temporibus iure at. Consectetur, nobis!'
+        categoryId: 5, description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate saepe dignissimos ut, ducimus necessitatibus at vitae reiciendis. Cumque veniam nulla provident aut omnis laudantium ipsa temporibus iure at. Consectetur, nobis!'
 
     },
     {
@@ -165,7 +165,7 @@ export const booksData = [
         author: 'Керстин Гир',
         image: bookImageTwo,
         price: 740,
-        categoryId: 7, description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate saepe dignissimos ut, ducimus necessitatibus at vitae reiciendis. Cumque veniam nulla provident aut omnis laudantium ipsa temporibus iure at. Consectetur, nobis!'
+        categoryId: 2, description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate saepe dignissimos ut, ducimus necessitatibus at vitae reiciendis. Cumque veniam nulla provident aut omnis laudantium ipsa temporibus iure at. Consectetur, nobis!'
 
     },
     {
@@ -174,7 +174,7 @@ export const booksData = [
         author: 'Агнешка Тишка',
         image: bookImageTwree,
         price: 290,
-        categoryId: 4, description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate saepe dignissimos ut, ducimus necessitatibus at vitae reiciendis. Cumque veniam nulla provident aut omnis laudantium ipsa temporibus iure at. Consectetur, nobis!'
+        categoryId: 3, description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate saepe dignissimos ut, ducimus necessitatibus at vitae reiciendis. Cumque veniam nulla provident aut omnis laudantium ipsa temporibus iure at. Consectetur, nobis!'
 
     },
     {
@@ -183,7 +183,7 @@ export const booksData = [
         author: 'Наталья Зотова',
         image: bookImageFour,
         price: 900,
-        categoryId: 3, description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate saepe dignissimos ut, ducimus necessitatibus at vitae reiciendis. Cumque veniam nulla provident aut omnis laudantium ipsa temporibus iure at. Consectetur, nobis!'
+        categoryId: 4, description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate saepe dignissimos ut, ducimus necessitatibus at vitae reiciendis. Cumque veniam nulla provident aut omnis laudantium ipsa temporibus iure at. Consectetur, nobis!'
 
     },
     {
@@ -192,7 +192,7 @@ export const booksData = [
         author: 'Михаил Бурняшев',
         image: bookImageFive,
         price: 780,
-        categoryId: 2, description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate saepe dignissimos ut, ducimus necessitatibus at vitae reiciendis. Cumque veniam nulla provident aut omnis laudantium ipsa temporibus iure at. Consectetur, nobis!'
+        categoryId: 5, description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate saepe dignissimos ut, ducimus necessitatibus at vitae reiciendis. Cumque veniam nulla provident aut omnis laudantium ipsa temporibus iure at. Consectetur, nobis!'
     },
     {
         id: 4320,
@@ -209,7 +209,7 @@ export const booksData = [
         author: 'Керстин Гир',
         image: bookImageTwo,
         price: 740,
-        categoryId: 7, description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate saepe dignissimos ut, ducimus necessitatibus at vitae reiciendis. Cumque veniam nulla provident aut omnis laudantium ipsa temporibus iure at. Consectetur, nobis!'
+        categoryId: 2, description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate saepe dignissimos ut, ducimus necessitatibus at vitae reiciendis. Cumque veniam nulla provident aut omnis laudantium ipsa temporibus iure at. Consectetur, nobis!'
 
     },
     {
@@ -218,7 +218,7 @@ export const booksData = [
         author: 'Агнешка Тишка',
         image: bookImageTwree,
         price: 290,
-        categoryId: 4,
+        categoryId: 3,
         description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate saepe dignissimos ut, ducimus necessitatibus at vitae reiciendis. Cumque veniam nulla provident aut omnis laudantium ipsa temporibus iure at. Consectetur, nobis!'
     },
     {
@@ -227,7 +227,7 @@ export const booksData = [
         author: 'Наталья Зотова',
         image: bookImageFour,
         price: 900,
-        categoryId: 3, description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate saepe dignissimos ut, ducimus necessitatibus at vitae reiciendis. Cumque veniam nulla provident aut omnis laudantium ipsa temporibus iure at. Consectetur, nobis!'
+        categoryId: 4, description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate saepe dignissimos ut, ducimus necessitatibus at vitae reiciendis. Cumque veniam nulla provident aut omnis laudantium ipsa temporibus iure at. Consectetur, nobis!'
 
     },
     {
@@ -236,7 +236,7 @@ export const booksData = [
         author: 'Михаил Бурняшев',
         image: bookImageFive,
         price: 780,
-        categoryId: 2, description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate saepe dignissimos ut, ducimus necessitatibus at vitae reiciendis. Cumque veniam nulla provident aut omnis laudantium ipsa temporibus iure at. Consectetur, nobis!'
+        categoryId: 5, description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate saepe dignissimos ut, ducimus necessitatibus at vitae reiciendis. Cumque veniam nulla provident aut omnis laudantium ipsa temporibus iure at. Consectetur, nobis!'
     },
     {
         id: 21,
@@ -246,6 +246,33 @@ export const booksData = [
         price: 700,
         categoryId: 3,
         description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate saepe dignissimos ut, ducimus necessitatibus at vitae reiciendis. Cumque veniam nulla provident aut omnis laudantium ipsa temporibus iure at. Consectetur, nobis!'
+    }
+]
+
+export const categories = [
+    {
+        name: 'Фантастика',
+        categoryId: 1
+    },
+
+    {
+        name: 'Саморазвитие',
+        categoryId: 2
+    },
+
+    {
+        name: 'Детективы',
+        categoryId: 3
+    },
+
+    {
+        name: 'Детские',
+        categoryId: 4
+    },
+
+    {
+        name: 'Аудиокниги',
+        categoryId: 5
     }
 ]
 

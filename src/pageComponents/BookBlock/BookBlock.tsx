@@ -12,18 +12,13 @@ export const BookPreview = () => {
     const navigate = useNavigate()
     const backBtn = () => navigate(-1)
 
-    // console.log(navigate);
-    // console.log(useParams());
-    // const bookId = Number((window.location.pathname).replace('/book/', ''))
-    // const book = booksData.find(book => book.id === bookId)
-
     const book = booksData.find(book => book.id === Number(id))
 
     return (
 
         <Container>
             <section className={styles.main}>
-                <button onClick={backBtn}><p>Назад</p></button>
+                <button onClick={backBtn} className={styles.main__backBtn}><p>Назад</p></button>
                 {/* <Link onClick={backBtn}>
                     <p>Назад</p>
                 </Link> */}
@@ -47,7 +42,7 @@ export const BookPreview = () => {
                         <p>{book?.description}</p>
 
                         <div className={styles.bookInterract}>
-                            <Button name='Добавить в корзину'/>
+                            <Button name='Добавить в корзину' />
                             {buySvg}
                             <motion.svg
                                 whileHover={{ scale: 1.4 }}
