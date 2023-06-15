@@ -4,13 +4,20 @@ body {
             display: none;
         }
     }
+
+    @media screen and (max-width:500px) {
+        & h1 {
+            line-height: 120%;
+        }
+    }
 }
 
 .promo {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 80vh;
+    // height: 80vh;
+    margin: 50px;
 
     &__text {
         max-width: 400px;
@@ -57,11 +64,11 @@ body {
     }
 
     @media screen and (max-width:700px) {
-        gap: 1px;
-        margin: 0;
+        // gap: 1px;
+        // margin: 0;
 
         &__text {
-            gap: 1px;
+            gap: 10px;
         }
 
         &__slider {

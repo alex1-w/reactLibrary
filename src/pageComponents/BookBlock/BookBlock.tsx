@@ -24,8 +24,8 @@ export const BookPreview = () => {
                 </Link> */}
                 <div className={styles.wrapper}>
 
-                    <div>
-                        <img src={book?.image} alt={book?.title} className={styles.image} />
+                    <div className={styles.imgBlock}>
+                        <img src={book?.image} alt={book?.title} className={styles.imgBlock__image} />
                     </div>
 
                     <div className={styles.aboutBook}>

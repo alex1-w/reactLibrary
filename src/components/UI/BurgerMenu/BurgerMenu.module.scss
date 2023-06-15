@@ -33,10 +33,14 @@
     justify-content: flex-end;
 
     &__inputBlock {
-        display: flex;
-        gap: 2px;
-        align-items: center;
-        border-bottom: 1px solid rgba(194, 194, 194, 0.911);
+        display: none;
+
+        @media screen and (max-width: 700px) {
+            display: flex;
+            gap: 2px;
+            align-items: center;
+            border-bottom: 1px solid rgba(194, 194, 194, 0.911);
+        }
 
         & input {
             font-family: 'Montserrat';

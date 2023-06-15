@@ -47,18 +47,32 @@
 }
 
 .burgerMenu {
-    display: none;
+    // display: none;
+
+    &__main {
+        display: none;
+    }
+
+    &__userInterfaceBlock {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
 
     @media screen and (max-width:950px) {
         display: flex;
+        align-items: center;
+        gap: 15px;
+
+        &__main {
+            display: flex;
+
+        }
     }
 }
 
-.userInterfaceBlock {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
+
 
 .phoneNumber {
     display: none;
@@ -67,45 +81,71 @@
 ////////////////////////////////////////////////////////////////////
 //для мобилок
 
+// @media screen and (max-width:420px) {
+
+//     .wrapper {
+//         width: 95%;
+//         justify-content: space-between;
+//         // padding: 0 7px;
+//         // border: 1px solid red;
+//         margin-top: 10px;
+//         display: grid;
+//         grid-template-areas:
+//             "logoBlock  burgerMenu"
+//             "phoneNumber userInterfaceBlock"
+//             "phoneNumber userInterfaceBlock";
+//     }
+
+//     .logoBlock {
+//         grid-area: logoBlock;
+//     }
+
+//     .burgerMenu {
+//         grid-area: burgerMenu;
+//         justify-content: end;
+//     }
+
+//     .userInterfaceBlock {
+//         grid-area: userInterfaceBlock;
+
+//     }
+
+//     .phoneNumber {
+//         display: block;
+//         grid-area: phoneNumber;
+//     }
+// }
+
+// @media screen and (max-width:320px) {
+//     .wrapper {
+//         padding: 0;
+//     }
+// }
+
+////////////////////////////////////////////////////////////////////
+/// 
+
 @media screen and (max-width:420px) {
 
     .wrapper {
-        width: 95%;
-        justify-content: space-between;
-        // padding: 0 7px;
-        // border: 1px solid red;
-        margin-top: 10px;
-        display: grid;
-        grid-template-areas:
-            "logoBlock  burgerMenu"
-            "phoneNumber userInterfaceBlock"
-            "phoneNumber userInterfaceBlock";
+        padding: 7px;
     }
 
     .logoBlock {
-        grid-area: logoBlock;
+        // border: 1px solid red;   
+        align-self: start;
     }
 
     .burgerMenu {
-        grid-area: burgerMenu;
-        justify-content: end;
-    }
+        display: flex;
+        flex-direction: column-reverse;
 
-    .userInterfaceBlock {
-        grid-area: userInterfaceBlock;
 
-    }
+        &__main {
 
-    .phoneNumber {
-        display: block;
-        grid-area: phoneNumber;
+            align-self: end;
+        }
+
+        &__userInterfaceBlock {}
     }
 }
-
-@media screen and (max-width:320px) {
-    .wrapper {
-        padding: 0;
-    }
-}
-
-////////////////////////////////////////////////////////////////////

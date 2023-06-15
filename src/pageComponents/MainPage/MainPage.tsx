@@ -17,7 +17,7 @@ export const MainPage = () => {
                 <section className={styles.promo}>
 
                     <div className={styles.promo__text}>
-                        <h1>Книги от А до Я</h1>
+                        <h1>Книги от А&nbsp;до&nbsp;Я</h1>
                         <p className={styles.promo__subtext}>В нашем магазине можно найти книгу на любой вкус. Большой ассортимент. Приятные цены. Интересные сюжеты.</p>
                         <Link to={`/catalog`} className={styles.catalogBtn}>
                             <p>Перейти в каталог</p>
@@ -52,14 +52,15 @@ export const MainPage = () => {
                     <h2>Каталог</h2>
                     <div className={styles.catalogBlock__grid}>
                         {catalog.map(item => (
-                            <a href={item.link} key={item.name}>
+                            <Link to={item.link} key={item.name}>
                                 <motion.div
                                     className={styles.catalogBlock__item}
                                     whileHover={{ scale: 1.3 }}
                                 >
                                     <p>{item.name}</p>
                                 </motion.div>
-                            </a>))}
+                            </Link>
+                        ))}
                     </div>
 
                 </section>
@@ -87,7 +88,7 @@ export const MainPage = () => {
                             Клиенты из других городов Украины могут получить заказ в течение 1-5 дней в зависимости от местонахождения населенного пункта и выбранного способа доставки. Заказы на сумму свыше 1000 грн доставляются бесплатно*.
                             Доступные способы, точные сроки и стоимость доставки Вы можете увидеть во время оформления заказа в корзине заказа, после выбора города доставки.
                         </p>
-                        <a href="/">Подробнее</a>
+                        <Link to="/">Подробнее</Link>
 
                     </div>
 
@@ -98,15 +99,17 @@ export const MainPage = () => {
                         <div className={styles.socialLinks}>
                             {socialLinks.map(item => (
                                 <Fragment key={item.name}>
-                                    <motion.a
-                                        className="my-anchor-element"
-                                        data-tooltip-content={item.name}
-                                        data-tooltip-id='name'
-                                        whileHover={{ scale: 1.3 }}
-                                        href={item.link}
+                                    <Link to={item.link}
                                     >
-                                        <img src={item.logo} alt={item.name} />
-                                    </motion.a>
+                                        <motion.div
+                                            className="my-anchor-element"
+                                            data-tooltip-content={item.name}
+                                            data-tooltip-id='name'
+                                            whileHover={{ scale: 1.3 }}
+                                        >
+                                            <img src={item.logo} alt={item.name} />
+                                        </motion.div>
+                                    </Link>
                                     <Socialtooltip id='name' className={styles.socialLinks__tooltip} />
                                 </Fragment>
                             ))}

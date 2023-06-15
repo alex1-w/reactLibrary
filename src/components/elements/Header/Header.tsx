@@ -35,19 +35,24 @@ export const Header = () => {
                 <Navigation />
 
                 <Input />
-                <div className={styles.userInterfaceBlock}>
-
-                    <UserAccount loginOpened={loginOpened} />
-                    {opened && !isLogin &&
-                        <Blackout>
-                            <LogIn closeBtn={closeBtn} />
-                        </Blackout>
-                    }
-
-                </div>
 
                 <div className={styles.burgerMenu}>
-                    <BurgerMenu />
+
+                    <div className={styles.burgerMenu__userInterfaceBlock}>
+
+                        <UserAccount loginOpened={loginOpened} />
+                        {opened && !isLogin &&
+                            <Blackout>
+                                <LogIn closeBtn={closeBtn} />
+                            </Blackout>
+                        }
+
+                    </div>
+
+                    <div className={styles.burgerMenu__main}>
+                        <BurgerMenu />
+                    </div>
+
                 </div>
 
                 {/* <div>
