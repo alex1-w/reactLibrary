@@ -8,9 +8,10 @@ import { NavLink } from "react-router-dom";
 
 interface INavProps {
     link: INavLink
+    description: string
 }
 
-export const NavItem: FC<INavProps> = ({ link }) => {
+export const NavItem: FC<INavProps> = ({ link, description }) => {
 
     const [isOpenDropdown, setIsOpenDropdown] = useState<boolean>(false)
 
@@ -37,7 +38,7 @@ export const NavItem: FC<INavProps> = ({ link }) => {
                         exit={{ opacity: 0 }}
 
                     >
-                        <p>grrg </p>
+                        <p>{description}</p>
                     </motion.div>}
             </AnimatePresence>
 

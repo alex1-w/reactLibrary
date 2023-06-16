@@ -33,12 +33,13 @@ export const MainPage = () => {
 
                     <div className={styles.recieptSliderBlock__head}>
                         <h4>Горячие&nbsp;поступления</h4>
+
                         <ul className={styles.recieptSliderBlock__list}>
                             {reciepts.map(reciept => (
                                 <li key={reciept.name}>
-                                    <a href={reciept.link}>
+                                    <Link to={reciept.link}>
                                         <p>{reciept.name}</p>
-                                    </a>
+                                    </Link>
                                 </li>))}
                         </ul>
                     </div>
@@ -52,15 +53,14 @@ export const MainPage = () => {
                     <h2>Каталог</h2>
                     <div className={styles.catalogBlock__grid}>
                         {catalog.map(item => (
-                            <Link to={item.link} key={item.name}>
+                            <a href={item.link} key={item.name}>
                                 <motion.div
                                     className={styles.catalogBlock__item}
                                     whileHover={{ scale: 1.3 }}
                                 >
                                     <p>{item.name}</p>
                                 </motion.div>
-                            </Link>
-                        ))}
+                            </a>))}
                     </div>
 
                 </section>
@@ -88,7 +88,7 @@ export const MainPage = () => {
                             Клиенты из других городов Украины могут получить заказ в течение 1-5 дней в зависимости от местонахождения населенного пункта и выбранного способа доставки. Заказы на сумму свыше 1000 грн доставляются бесплатно*.
                             Доступные способы, точные сроки и стоимость доставки Вы можете увидеть во время оформления заказа в корзине заказа, после выбора города доставки.
                         </p>
-                        <Link to="/">Подробнее</Link>
+                        <a href="/">Подробнее</a>
 
                     </div>
 
@@ -99,17 +99,15 @@ export const MainPage = () => {
                         <div className={styles.socialLinks}>
                             {socialLinks.map(item => (
                                 <Fragment key={item.name}>
-                                    <Link to={item.link}
+                                    <motion.a
+                                        className="my-anchor-element"
+                                        data-tooltip-content={item.name}
+                                        data-tooltip-id='name'
+                                        whileHover={{ scale: 1.3 }}
+                                        href={item.link}
                                     >
-                                        <motion.div
-                                            className="my-anchor-element"
-                                            data-tooltip-content={item.name}
-                                            data-tooltip-id='name'
-                                            whileHover={{ scale: 1.3 }}
-                                        >
-                                            <img src={item.logo} alt={item.name} />
-                                        </motion.div>
-                                    </Link>
+                                        <img src={item.logo} alt={item.name} />
+                                    </motion.a>
                                     <Socialtooltip id='name' className={styles.socialLinks__tooltip} />
                                 </Fragment>
                             ))}

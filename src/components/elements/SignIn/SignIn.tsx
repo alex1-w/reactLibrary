@@ -54,13 +54,11 @@ export const SignIn = () => {
         <AnimatePresence>
 
             <div className={styles.inputBlock}>
-
                 <input type="text" onChange={changeHandler} value={formState.name} name='name' placeholder='name' />
                 <input type="password" onChange={changeHandler} value={formState.password} name='password' placeholder='password' />
                 <input type="password" onChange={changeHandler} value={formState.repeatPassword} name='repeatPassword' placeholder='repeat password' />
 
                 <button className={styles.enterBtn} onClick={signIn}>ENTER</button>
-
             </div>
 
         </AnimatePresence>

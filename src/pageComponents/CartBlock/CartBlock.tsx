@@ -4,26 +4,24 @@ import { UserContext } from '../../providers/UserProvider'
 import { Container } from '../../components/Container/Container'
 import { CartBookItem } from '../../components/elements/CartBookItem/CartBookItem'
 import { IBook } from '../../types/IBookItem'
+import { Pagination } from '../../components/elements/Pagination/Pagination'
 
 export const CartBlock: FC = () => {
     const { user } = useContext(UserContext)
     const [page, setPage] = useState<IBook[]>([])
 
-
     const amount = user.cart.reduce((total, nextPrice) => total + nextPrice.price, 0)
 
     useEffect(() => { setPage(user.cart.slice(0, 5)) }, [])
 
-    const bookInPage = 5
+    // const bookInPage = 5
 
-    const bookSlice = (index: number) => {
-        const books = user.cart.slice(index * bookInPage, index * bookInPage + bookInPage);
-        setPage(books)
-        // console.log(books);
-        console.log(Math.round(user.cart.length / 5));
-        console.log(user.cart.length);
-
-    }
+    // const bookSlice = (index: number) => {
+    //     const books = user.cart.slice(index * bookInPage, index * bookInPage + bookInPage);
+    //     setPage(books)
+    //     console.log(Math.round(user.cart.length / 5));
+    //     console.log(user.cart.length);
+    // }
 
     return (
         <Container>
@@ -45,16 +43,19 @@ export const CartBlock: FC = () => {
                     }
                 </div>
 
-                {/* /////////////////////////тута правильно а????///////////////////////////////// */}
-                {user.cart.length > 5 ?
-                    <div className={styles.paginate}>
-                        {user.cart.slice(0, Math.ceil(user.cart.length / 5)).map((item, index) => (
-                            <div onClick={() => bookSlice(index)} key={index}>
-                                {index + 1}
-                            </div>
-                        ))}
-                    </div>
-                    : null}
+                {/* <div className={styles.paginationBlock}>
+
+                    {user.cart.length > 5 ?
+                        <div className={styles.paginationBlock__paginate}>
+                            {user.cart.slice(0, Math.ceil(user.cart.length / 5)).map((item, index) => (
+                                <div onClick={() => bookSlice(index)} key={index}>
+                                    {index + 1}
+                                </div>
+                            ))}
+                        </div>
+                        : null}
+                </div> */}
+                <Pagination books={user.cart} setPage={setPage} bookInPage={5} />
             </section>
 
         </Container >

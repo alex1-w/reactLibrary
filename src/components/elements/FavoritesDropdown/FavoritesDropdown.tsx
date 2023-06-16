@@ -14,6 +14,7 @@ const arrowRight =
 export const FavoritesDropdown: FC = () => {
     const { user } = useContext(UserContext)
 
+
     return (
         <AnimatePresence>
 

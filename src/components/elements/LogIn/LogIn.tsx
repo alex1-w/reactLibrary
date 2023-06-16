@@ -74,8 +74,8 @@ export const LogIn: FC<{ closeBtn: () => void }> = ({ closeBtn }) => {
 
                 <div className={styles.inputBlock}>
 
-                    <input type="email" onChange={changeHandler} value={formState.name} name='name' />
-                    <input type="password" onChange={changeHandler} value={formState.password} name='password' />
+                    <input type="email" onChange={changeHandler} value={formState.name} name='name' placeholder='name' />
+                    <input type="password" onChange={changeHandler} value={formState.password} name='password' placeholder='password'/>
 
                     <button className={styles.enterBtn} onClick={logIn}>ENTER</button>
                 </div>}

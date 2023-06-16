@@ -1,0 +1,23 @@
+.main {}
+
+.paginate {
+    display: flex;
+    gap: 10px;
+}
+
+
+.main {
+    margin: 20px 0;
+}
+
+.paginate {
+    justify-self: flex-end;
+    display: flex;
+    gap: 12px;
+
+    & div {
+        border: 2px solid;
+        padding: 4px 7px;
+        border-radius: 8px;
+    }
+}
