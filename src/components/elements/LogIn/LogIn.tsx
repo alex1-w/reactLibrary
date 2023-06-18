@@ -44,14 +44,13 @@ export const LogIn: FC<{ closeBtn: () => void }> = ({ closeBtn }) => {
     return (
         <motion.div
             className={styles.main}
-            initial={{ x: 1000 }}
-            animate={{ x: 0 }}
+            // initial={{ x: 1000 }}
+            // animate={{ x: 0 }}
         >
 
             <button className={styles.closeBtn} onClick={closeBtn}>
                 <TfiClose size={20} />
             </button>
-
 
             <div className={styles.loginAndSignin}>
 
@@ -75,7 +74,7 @@ export const LogIn: FC<{ closeBtn: () => void }> = ({ closeBtn }) => {
                 <div className={styles.inputBlock}>
 
                     <input type="email" onChange={changeHandler} value={formState.name} name='name' placeholder='name' />
-                    <input type="password" onChange={changeHandler} value={formState.password} name='password' placeholder='password'/>
+                    <input type="password" onChange={changeHandler} value={formState.password} name='password' placeholder='password' />
 
                     <button className={styles.enterBtn} onClick={logIn}>ENTER</button>
                 </div>}

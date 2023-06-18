@@ -13,13 +13,15 @@ export const Blackout = ({ children }: BlackoutProps) => {
 
             <div className={styles.main}>
                 <motion.div
-                    initial={{ x: 1000 }}
-                    animate={{ x: 0 }}
+                    initial={{ opacity: 0 }}
+                    exit={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
                     className={styles.blackout}
-                />
-                <div className={styles.blackoutContent}>
-                    {children}
-                </div>
+                >
+                    <div className={styles.blackoutContent}>
+                        {children}
+                    </div>
+                </motion.div>
             </div>
         </AnimatePresence>
     )

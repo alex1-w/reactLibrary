@@ -1,7 +1,4 @@
-.main {
-    // width: 40vw;
-    // max-width: 250px;
-}
+.main {}
 
 .wrapper {
     padding: 10px;
@@ -12,7 +9,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-
 }
 
 .sum {
@@ -96,21 +92,20 @@
 
 
 //////////////////////////////////////////////////////////////////////
+// / для мобилок
 
-// / для планшетов
 @media screen and (max-width:500px) {
 
     .wrapper {
         width: 120px;
         // height: 270px;
+
     }
 
     .sum {
+        align-self: center;
+        gap: 20px;
         // border: 1px solid red;
-    }
-
-    .imgBlock {
-        & img {}
     }
 
     .description {

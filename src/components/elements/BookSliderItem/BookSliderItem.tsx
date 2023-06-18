@@ -72,7 +72,6 @@ export const BookSliderItem: FC<{ book: IBook }> = ({ book }) => {
 
     return (
 
-
         <motion.div whileHover={{ boxShadow: '0px 7px 30px rgba(0, 0, 0, 0.30)' }} className={styles.card}>
 
             <div className={styles.imgBlock}>
@@ -138,8 +137,6 @@ export const BookSliderItem: FC<{ book: IBook }> = ({ book }) => {
             </div>
 
         </motion.div>
-
-
     )
 }
 
