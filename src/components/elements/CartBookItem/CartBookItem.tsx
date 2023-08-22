@@ -11,8 +11,6 @@ export const CartBookItem: FC<{ book: IBook }> = ({ book }) => {
     return (
         <div className={styles.main}>
             <motion.div
-                // initial={{ boxShadow: 'inset 0px 0px 14px rgba(139, 139, 139, 0.9)' }}
-                // animate={{ boxShadow: '3px 3px 3px 3px rgba(0,0,0,0.3)' }}
                 transition={{ delay: 0.1 }}
                 whileHover={{ boxShadow: '3px 3px 3px 3px rgba(0,0,0,0.3)' }}
                 className={styles.wrapper}

@@ -4,12 +4,10 @@ import { motion, AnimatePresence } from 'framer-motion'
 interface BlackoutProps {
     title?: string
     children?: React.ReactNode
-    // loginClosed: () => void
 }
 
 export const Blackout = ({ children }: BlackoutProps) => {
     return (
-        <AnimatePresence>
 
             <div className={styles.main}>
                 <motion.div
@@ -23,6 +21,5 @@ export const Blackout = ({ children }: BlackoutProps) => {
                     </div>
                 </motion.div>
             </div>
-        </AnimatePresence>
     )
 }

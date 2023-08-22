@@ -63,7 +63,8 @@ export const LogIn: FC<{ closeBtn: () => void }> = ({ closeBtn }) => {
                 </motion.button>
 
             </div>
-            {pageVariant === 'login' &&
+            {pageVariant === 'login'
+                &&
 
                 <div className={styles.inputBlock}>
 
@@ -73,9 +74,10 @@ export const LogIn: FC<{ closeBtn: () => void }> = ({ closeBtn }) => {
                     <button className={styles.enterBtn} onClick={logIn}>ENTER</button>
                 </div>}
 
-            {pageVariant === 'signin' &&
-                <SignIn />}
-
+            {pageVariant === 'signin'
+                &&
+                <SignIn />
+            }
         </div>
 
     )

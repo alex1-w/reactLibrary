@@ -21,7 +21,8 @@ export const Pagination: FC<IPaginationProps> = ({ books, setPage, bookInPage })
     return (
         <div className={styles.main}>
 
-            {books.length > 5 ?
+            {books.length > 5
+                ?
                 <div className={styles.paginate}>
                     {books.slice(0, Math.ceil(books.length / 5)).map((item, index) => (
                         <div onClick={() => bookSlice(index)} key={index}>
@@ -29,7 +30,8 @@ export const Pagination: FC<IPaginationProps> = ({ books, setPage, bookInPage })
                         </div>
                     ))}
                 </div>
-                : null}
+                :
+                null}
         </div>
     )
 }

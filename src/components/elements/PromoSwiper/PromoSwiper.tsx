@@ -3,13 +3,9 @@ import 'swiper/css';
 import 'swiper/css/scrollbar';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Thumbs } from 'swiper';
-
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
-// import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-// import SlidePrevButton from './SlidePrevButton/SlidePrevButton';
-// import SlideNextButton from './SlideNextBtn/SlideNextBtn';
 import promoSliderItem from '../../images/sliderThreeItem.png'
 import promoSliderBack from '../../images/background.png'
 import { useState } from 'react';
@@ -22,9 +18,7 @@ const images = [
 
 
 export const PromoSwiper = () => {
-
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
 
     return (
         <div className={styles.main}>
@@ -41,8 +35,6 @@ export const PromoSwiper = () => {
                     </SwiperSlide>
                 ))}
                 <Swiper
-                    // onSwiper={setThumbsSwiper}
-                    // onSwiper={()=>}
                     modules={[Thumbs]}
                     watchSlidesProgress
                 >

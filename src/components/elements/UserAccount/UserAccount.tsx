@@ -25,7 +25,6 @@ export const UserAccount = ({ loginOpened }: { loginOpened: () => void }) => {
         if (openDropdownName === 'searchDropdown') setOpenedFav(false)
     }
 
-
     return (
         <div>
             {!isLogin
@@ -54,7 +53,6 @@ export const UserAccount = ({ loginOpened }: { loginOpened: () => void }) => {
                     <Link to={'/cart'} className={styles.cartIcon}>
                         {cartIcon}
                     </Link>
-
 
                     <div className={styles.exit} onClick={exitFunc}>
                         {exitIcon}

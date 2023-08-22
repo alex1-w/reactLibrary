@@ -118,8 +118,7 @@ export const BookSliderItem: FC<{ book: IBook }> = ({ book }) => {
                     }
                 </AnimatePresence>
 
-                <div onClick={() => putInPlace(book, 'favorites')}
-                >
+                <div onClick={() => putInPlace(book, 'favorites')}>
                     {likeSvg}
                 </div>
 

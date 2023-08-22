@@ -32,7 +32,6 @@ export const Slider = () => {
 
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
-                // spaceBetween={20}
                 slidesPerView={4}
                 grabCursor={true}
                 freeMode
@@ -46,10 +45,11 @@ export const Slider = () => {
                     </SwiperSlide>
                 ))}
 
-                {/* <span slot="container-start"></span> */}
                 <span slot="container-end" className={styles.sliderNavigation}>
+
                     <SlidePrevButton />
                     <SlideNextButton />
+
                 </span>
             </Swiper>
 
