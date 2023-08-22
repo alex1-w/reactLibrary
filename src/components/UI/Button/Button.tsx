@@ -1,5 +1,5 @@
-import { FC } from "react";
 import styles from './Button.module.scss';
+import { FC } from "react";
 import cn from 'classnames'
 
 export interface IBtnProps {

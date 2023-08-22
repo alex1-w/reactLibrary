@@ -32,9 +32,7 @@ export const LogIn: FC<{ closeBtn: () => void }> = ({ closeBtn }) => {
 
         if (formState.name === userInUsersLS.name && formState.password === userInUsersLS.password) {
             enqueueSnackbar('Вход выполнен', { variant: 'success' })
-
             localStorage.setItem('user', JSON.stringify(userInUsersLS))
-
             setUser(userInUsersLS)
 
             return setIsLogin(true)
@@ -42,11 +40,7 @@ export const LogIn: FC<{ closeBtn: () => void }> = ({ closeBtn }) => {
     }
 
     return (
-        <motion.div
-            className={styles.main}
-            // initial={{ x: 1000 }}
-            // animate={{ x: 0 }}
-        >
+        <div className={styles.main}>
 
             <button className={styles.closeBtn} onClick={closeBtn}>
                 <TfiClose size={20} />
@@ -82,7 +76,7 @@ export const LogIn: FC<{ closeBtn: () => void }> = ({ closeBtn }) => {
             {pageVariant === 'signin' &&
                 <SignIn />}
 
-        </motion.div>
+        </div>
 
     )
 }

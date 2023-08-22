@@ -1,4 +1,3 @@
-import { Fragment } from 'react'
 import styles from './BurgerMenu.module.scss'
 import { useState, useRef } from "react"
 import { Blackout } from '../../elements/Blackout/Blackout'
@@ -12,15 +11,13 @@ export const BurgerMenu = () => {
 
     const openMenu = () => {
         setIsMenuOpened(!isMenuOpened)
-        // ref.current.
-        // localStorage.clear()
         disableMiddleSpan.current?.classList.toggle(styles.disable)
     }
 
     return (
         <>
             {isMenuOpened && <Blackout />}
-            <div className={styles.main} onClick={() => { openMenu() }} ref={disableMiddleSpan}>
+            <div className={styles.main} onClick={openMenu} ref={disableMiddleSpan}>
 
                 <span></span>
                 <span></span>

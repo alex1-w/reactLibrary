@@ -1,5 +1,7 @@
 .card {
-    width: fit-content;
+    // width: fit-content;
+    width: 150px;
+    height: 300px;
     padding: 25px;
     color: #241400;
     display: flex;
@@ -33,46 +35,35 @@
     &__footer {
         display: grid;
         grid-template-columns: 110px auto;
+        align-items: center;
         gap: 4px;
 
         &__cartIcon {
-            height: 38.67px;
             display: flex;
+            // border: 1.5px solid rgb(29, 255, 93);
+            // background-color: rgba(35, 245, 35, 0.285);
+            border-radius: 10px;
+            padding: 7px;
+            display: flex;
+            gap: 4px;
             align-items: center;
-            justify-content: baseline;
 
             & p {
                 font-size: 10px;
                 line-height: 90%;
             }
         }
+
+        &__followInCartBtn {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
     }
 }
 
-.image {
-    // width: 134.23px;
-    // height: 190px;
-}
+.image {}
 
 .imgBlock {
-    // display: flex;
     align-self: center;
-}
-
-.likeSvg {
-    & .colorLiked {
-        fill: red;
-    }
-
-    & .colorNotLiked {
-        fill: black;
-    }
-
-    &:hover {
-        // transition: all 0.3;
-        // fill: red;
-        // width-stroke: 20;
-        // stroke: "green"
-
-    }
 }

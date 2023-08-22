@@ -36,7 +36,6 @@ export const NavItem: FC<INavProps> = ({ link, description }) => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-
                     >
                         <p>{description}</p>
                     </motion.div>}

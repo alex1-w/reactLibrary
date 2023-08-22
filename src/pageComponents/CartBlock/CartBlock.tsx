@@ -1,5 +1,5 @@
-import { FC, useContext, useEffect, useState } from 'react'
 import styles from './CartBlock.module.scss'
+import { FC, useContext, useEffect, useState } from 'react'
 import { UserContext } from '../../providers/UserProvider'
 import { Container } from '../../components/Container/Container'
 import { CartBookItem } from '../../components/elements/CartBookItem/CartBookItem'
@@ -25,36 +25,28 @@ export const CartBlock: FC = () => {
 
     return (
         <Container>
-            <section className={styles.mainBlock}>
+            <section className={styles.wrapper}>
                 <div className={styles.amountPrice}>
                     <h2>Итого:</h2>
                     <h3>{amount} руб.</h3>
                 </div>
 
-                <div className={styles.wrapper}>
-
-                    {user.cart.length > 0 ? page.map(book => (
-                        // <BookItem book={book} key={book.id} />
-                        <CartBookItem book={book} key={book.id} />
-                    )) :
-                        <div>
+                <>
+                    {user.cart.length
+                        ?
+                        <div className={styles.booksBlock}> {
+                            page.map(book => (
+                                <CartBookItem book={book} key={book.id} />
+                            ))}
+                        </div>
+                        :
+                        <div className={styles.empty}>
                             <p>Пусто</p>
                         </div>
                     }
-                </div>
+                </>
 
-                {/* <div className={styles.paginationBlock}>
 
-                    {user.cart.length > 5 ?
-                        <div className={styles.paginationBlock__paginate}>
-                            {user.cart.slice(0, Math.ceil(user.cart.length / 5)).map((item, index) => (
-                                <div onClick={() => bookSlice(index)} key={index}>
-                                    {index + 1}
-                                </div>
-                            ))}
-                        </div>
-                        : null}
-                </div> */}
                 <Pagination books={user.cart} setPage={setPage} bookInPage={5} />
             </section>
 

@@ -12,7 +12,6 @@ interface IFilter {
     category?: IBook[]
 }
 
-// ////////////////////////////////SIDEBASAR
 export const Catalog = () => {
     const [categoryBooks, setCategoryBooks] = useState<IBook[]>(booksData)
     const [showFilter, setShowFilter] = useState<boolean>(false)
@@ -24,9 +23,8 @@ export const Catalog = () => {
         category: categoryBooks
     })
 
-    const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-        setFilterForm({ ...filterForm, [e.target.name]: e.target.value })
-    }
+    const changeHandler = (e: ChangeEvent<HTMLInputElement>) => setFilterForm({ ...filterForm, [e.target.name]: e.target.value })
+
 
     const showDropdownFilter = () => {
         openFilterBlock.current?.classList.toggle(styles.opened)

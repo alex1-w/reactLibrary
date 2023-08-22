@@ -39,14 +39,15 @@ export const Header = () => {
                 <div className={styles.burgerMenu}>
 
                     <div className={styles.burgerMenu__userInterfaceBlock}>
-
                         <UserAccount loginOpened={loginOpened} />
-                        {opened && !isLogin &&
+                        {opened
+                            &&
+                            !isLogin
+                            &&
                             <Blackout>
                                 <LogIn closeBtn={closeBtn} />
                             </Blackout>
                         }
-
                     </div>
 
                     <div className={styles.burgerMenu__main}>
@@ -54,10 +55,6 @@ export const Header = () => {
                     </div>
 
                 </div>
-
-                {/* <div>
-                    <p className={styles.phoneNumber}>56435463546</p>
-                </div> */}
 
             </div>
         </header >

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, Navigate, NavigationType } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import { SnackbarProvider } from 'notistack';
 import { UserProvider } from './providers/UserProvider';
 import { NotFoundPage } from './pageComponents/NotFoundPage/NotFoundPage';
@@ -10,11 +10,8 @@ import { BookPreview } from './pageComponents/BookBlock/BookBlock';
 import { MainPage } from './pageComponents/MainPage/MainPage';
 import { Catalog } from './pageComponents/Catalog/Catalog';
 
-// что значит index
-
 function App() {
   return (
-
     <SnackbarProvider>
       <UserProvider>
         <Routes>
@@ -30,7 +27,6 @@ function App() {
         </Routes>
       </UserProvider>
     </SnackbarProvider>
-
   );
 }
 

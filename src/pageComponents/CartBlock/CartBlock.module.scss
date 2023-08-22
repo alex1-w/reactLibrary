@@ -1,18 +1,21 @@
-.mainBlock {
-    margin: 50px 0;
+.wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 10px;
-
+    min-height: 60vh;
 }
 
-.wrapper {
-    width: 100%;
-    margin: 0 auto;
+.mainContent {
+    display: flex;
+    width: fit-content;
+}
+
+.booksBlock {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    row-gap: 2rem;
+    gap: 20px;
+    align-items: center;
     justify-items: center;
 }
 
@@ -23,48 +26,36 @@
     width: fit-content;
 }
 
+.empty {
+    margin: 0 auto;
+}
+
 ////////////////////////////////////////////////////////////////////////////////////
 
-@media screen and (max-width: 1400px) {
-    .wrapper {
+@media screen and (max-width: 1210px) {
+    .booksBlock {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media screen and (max-width: 1100px) {
-    .wrapper {
+@media screen and (max-width: 950px) {
+    .wrapper{
+        margin: 0;
+    }
+    .booksBlock {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media screen and (max-width: 800px) {
-    .wrapper {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media screen and (max-width: 630px) {
-    .wrapper {
-        row-gap: 2em;
-    }
-}
-
-@media screen and (max-width:560px) {
-    .wrapper {
-        row-gap: 1em;
-    }
-}
-
-@media screen and (max-width:450px) {
-    .wrapper {
+@media screen and (max-width: 530px) {
+    .booksBlock {
         grid-template-columns: repeat(2, 1fr);
-        row-gap: 2em;
+        gap: 30px;
     }
 }
 
 @media screen and (max-width:320px) {
-    .wrapper {
-        row-gap: 1em;
+    .booksBlock {
+        gap: 10px;
     }
 }
-

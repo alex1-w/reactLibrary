@@ -10,9 +10,7 @@ import { Link } from 'react-router-dom';
 export const UserAccount = ({ loginOpened }: { loginOpened: () => void }) => {
     const { isLogin, setIsLogin, user, openDropdownName, setOpenDropdownName } = useContext(UserContext)
     const [openedFav, setOpenedFav] = useState<boolean>(false)
-    // console.log(openDropdownName);
     console.log(user.cash);
-
 
     const exitFunc = () => {
         localStorage.removeItem('user')
@@ -26,27 +24,29 @@ export const UserAccount = ({ loginOpened }: { loginOpened: () => void }) => {
         setOpenedFav(!openedFav)
         if (openDropdownName === 'searchDropdown') setOpenedFav(false)
     }
-    // console.log(openDropdownName);
-    // && openDropdownName === 'favoritesDropdown' 
+
+
     return (
         <div>
-            {!isLogin ?
+            {!isLogin
+                ?
                 <div onClick={() => loginOpened()} className={styles.enter}>
+
                     <p>Вход</p>
                     <FiLogIn size={30} color='#241400' />
+
                 </div>
                 :
                 <div className={styles.userInterface}>
 
                     <div className={styles.cashBlock}>
-                        <span>{arrowDown}</span>
-                        <p>
-                            {`${user?.cash} руб.`}
-                        </p>
+                        {arrowDown}
+                        <p>{`${user?.cash} руб.`}</p>
                     </div>
 
                     <div className={styles.likeIconBlock} onClick={showFav}>
                         {likeIcon}
+
                         {openedFav && user.favorites.length > 0 && <FavoritesDropdown />}
                         {openedFav && user.favorites.length === 0 && <FavoritesDropdown />}
                     </div>

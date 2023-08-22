@@ -7,9 +7,11 @@ import { IBook } from '../../../types/IBookItem';
 import { Link } from 'react-router-dom';
 import { InputDropdown } from './InputDropdown/InputDropdown';
 import { UserContext } from '../../../providers/UserProvider';
+import { useOnClickOutside } from '../../../hooks/useOnClickOutside';
 
 export const Input = () => {
     const { openDropdownName, setOpenDropdownName } = useContext(UserContext)
+    const inputBlockRef = useRef<HTMLDivElement>(null)
 
     const [searchValue, setSearchValue] = useState<string>('');
     const [searchBooks, setSearchFilms] = useState<IBook[]>([]);
@@ -25,7 +27,9 @@ export const Input = () => {
         if (searchValue === '') setOpenDropdownName(null)
     }, [searchValue]);
 
+    const closeDropDown = () => setSearchValue('')
     const escapeEvent = (e: any) => { if (e.key === 'Escape') setOpenDropdownName(null) }
+    useOnClickOutside(inputBlockRef, closeDropDown)
 
     return (
 
@@ -45,13 +49,12 @@ export const Input = () => {
                     whileFocus={{ backgroundColor: 'white' }}
                 />
             </div>
-            {openDropdownName === 'searchDropdown' &&
-                <motion.div
 
-                    className={styles.inputDropdown}>
-
+            {
+                openDropdownName === 'searchDropdown'
+                &&
+                <motion.div className={styles.inputDropdown}>
                     <InputDropdown searchBooks={searchBooks} />
-
                 </motion.div>
             }
         </div>
