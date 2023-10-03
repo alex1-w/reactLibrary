@@ -1,5 +1,4 @@
 .card {
-    // width: fit-content;
     width: 150px;
     height: 300px;
     padding: 25px;
@@ -30,8 +29,6 @@
         color: #241400;
     }
 
-    &__info {}
-
     &__footer {
         display: grid;
         grid-template-columns: 110px auto;
@@ -40,8 +37,6 @@
 
         &__cartIcon {
             display: flex;
-            // border: 1.5px solid rgb(29, 255, 93);
-            // background-color: rgba(35, 245, 35, 0.285);
             border-radius: 10px;
             padding: 7px;
             display: flex;
@@ -61,8 +56,6 @@
         }
     }
 }
-
-.image {}
 
 .imgBlock {
     align-self: center;

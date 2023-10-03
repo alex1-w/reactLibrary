@@ -1,7 +1,5 @@
-// @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Petemoss&display=swap");
-
 .main {
-    max-width:1300px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 30px;
     display: flex;
@@ -23,7 +21,6 @@
         align-self: flex-end;
         color: rgba(128, 128, 128, 0.628);
         font-size: 15px;
-
     }
 }
 
@@ -69,39 +66,33 @@
     margin: 0 auto;
     align-items: center;
     gap: 50px;
+    transition: 0.2s scale;
+
+    svg {
+        &:last-child {
+            scale: 1.4;
+            transition: 0.2s scale;
+        }
+    }
 }
 
-
-/////////////////////////////////////////////////////////////////
-
 @media screen and (max-width: 840px) {
-
-    .main {
-        &__backBtn {}
-    }
-
     .wrapper {
+        flex-direction: column-reverse;
         gap: 20px;
-
-    }
-
-    .imgBlock {
-        &__image {}
     }
 
     .aboutBook {
         display: flex;
         flex-direction: column;
+        padding: 10px 0;
         gap: 20px;
 
         & h1 {
-            // border: 1px solid red;
-
             line-height: 90%;
         }
 
         &__title {
-            // border: 1px solid red;
             display: flex;
             flex-direction: column;
 
@@ -120,39 +111,4 @@
             }
         }
     }
-
-    .bookInterract {}
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////
-
-
-@media screen and (max-width: 840px) {
-
-    .main {
-        &__backBtn {}
-    }
-
-    .wrapper {
-        flex-direction: column-reverse;
-    }
-
-    .imgBlock {
-        &__image {}
-    }
-
-    .aboutBook {
-        padding: 10px 0;
-        & h1 {}
-
-        &__title {
-            & span {}
-        }
-
-        &__subTitle {
-            & span {}
-        }
-    }
-
-    .bookInterract {}
 }

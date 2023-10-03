@@ -1,59 +1,60 @@
-import styles from './BurgerMenu.module.scss'
-import { useState, useRef } from "react"
-import { Blackout } from '../../elements/Blackout/Blackout'
-import { navLinks } from '../../elements/Navigation/Navigation'
-import { motion, AnimatePresence } from 'framer-motion'
+import styles from "./BurgerMenu.module.scss";
+import { useState, useRef } from "react";
+import { Blackout } from "../../elements/Blackout/Blackout";
+import { navLinks } from "../../elements/Navigation/Navigation";
+import { motion } from "framer-motion";
 
-const inputIcon =
-    <svg width={17} fill='rgba(194, 194, 194, 0.911)' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" /></svg>
-
+const inputIcon = (
+    <svg
+        width={17}
+        fill="rgba(194, 194, 194, 0.911)"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+    >
+        <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+    </svg>
+);
 
 export const BurgerMenu = () => {
-    const [isMenuOpened, setIsMenuOpened] = useState(false)
-    const disableMiddleSpan = useRef<HTMLDivElement>(null)
+    const [isMenuOpened, setIsMenuOpened] = useState(false);
+    const disableMiddleSpan = useRef<HTMLDivElement>(null);
 
     const openMenu = () => {
-        setIsMenuOpened(!isMenuOpened)
-        disableMiddleSpan.current?.classList.toggle(styles.disable)
-    }
+        setIsMenuOpened(!isMenuOpened);
+        disableMiddleSpan.current?.classList.toggle(styles.disable);
+    };
 
     return (
         <>
-            {isMenuOpened
-                &&
-                <Blackout />
-            }
+            {isMenuOpened && <Blackout />}
             <div className={styles.main} onClick={openMenu} ref={disableMiddleSpan}>
-
                 <span></span>
                 <span></span>
                 <span></span>
-
             </div>
 
-            {/* <AnimatePresence> */}
-            {isMenuOpened &&
-                <motion.div className={styles.navigation}
+            {isMenuOpened && (
+                <motion.div
+                    className={styles.navigation}
                     initial={{ x: 1000 }}
                     animate={{ x: 0 }}
-                // exit={{ x: 1000 }}
                 >
                     <div className={styles.navigation__inputBlock}>
                         {inputIcon}
-                        <input type="text" placeholder='Поиск' />
+                        <input type="text" placeholder="Поиск" />
                     </div>
 
                     <ul className={styles.navList}>
-                        {navLinks.map(item => (
+                        {navLinks.map((item) => (
                             <li className={styles.navList__item} key={item.name}>
                                 <a href={item.link}>
                                     <p>{item.name}</p>
                                 </a>
-                            </li>))}
+                            </li>
+                        ))}
                     </ul>
                 </motion.div>
-            }
-            {/* </AnimatePresence> */}
+            )}
         </>
-    )
-}
+    );
+};

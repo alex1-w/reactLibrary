@@ -1,19 +1,16 @@
 import { FC, useState } from "react";
 import { INavLink } from "../Navigation";
-import { AnimatePresence, motion } from 'framer-motion'
-import styles from './NavItem.module.scss'
+import { AnimatePresence, motion } from "framer-motion";
+import styles from "./NavItem.module.scss";
 import { NavLink } from "react-router-dom";
-// import {}
-
 
 interface INavProps {
-    link: INavLink
-    description: string
+    link: INavLink;
+    description: string;
 }
 
 export const NavItem: FC<INavProps> = ({ link, description }) => {
-
-    const [isOpenDropdown, setIsOpenDropdown] = useState<boolean>(false)
+    const [isOpenDropdown, setIsOpenDropdown] = useState<boolean>(false);
 
     return (
         <motion.li
@@ -24,13 +21,13 @@ export const NavItem: FC<INavProps> = ({ link, description }) => {
         >
             <NavLink
                 to={link.link}
-                className={({ isActive }) => isActive ? 'active' : ''}
+                className={({ isActive }) => (isActive ? "active" : "")}
             >
                 <p>{link.name}</p>
             </NavLink>
 
             <AnimatePresence>
-                {isOpenDropdown &&
+                {isOpenDropdown && (
                     <motion.div
                         className={styles.navDropdown}
                         initial={{ opacity: 0 }}
@@ -38,10 +35,9 @@ export const NavItem: FC<INavProps> = ({ link, description }) => {
                         exit={{ opacity: 0 }}
                     >
                         <p>{description}</p>
-                    </motion.div>}
+                    </motion.div>
+                )}
             </AnimatePresence>
-
-        </motion.li >
-
-    )
-}
+        </motion.li>
+    );
+};

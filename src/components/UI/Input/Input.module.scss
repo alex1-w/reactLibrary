@@ -23,10 +23,9 @@
         transition: 0.3s;
         border-radius: 6px;
         background-color: white;
-        // border: 1px solid rgb(220, 150, 22);
     }
 
-    @media screen and (max-width:700px) {
+    @media screen and (max-width: 700px) {
         display: none;
     }
 }
@@ -47,24 +46,15 @@
     overflow-y: scroll;
     transition: height 0.5s;
     visibility: visible;
-
-    // &.opened {
-    //     transition: height 0.5s;
-    //     visibility: visible;
-    // }
 }
 
-////////////////////////////////////////////////////////////////
 .main {
     position: relative;
-    // border: 1px solid rgb(255, 0, 149);
     height: fit-content;
-
 }
 
 .inputBlock {
-
-    & input {
+    input {
         transition: 0.3s;
         padding: 4px;
         background-color: inherit;
@@ -73,6 +63,10 @@
         height: 20px;
         width: 200px;
         font-size: 16px;
+
+        &:focus {
+            background-color: white;
+        }
     }
 
     &:hover {
@@ -80,10 +74,9 @@
         transition: 0.3s;
         border-radius: 6px;
         background-color: white;
-        // border: 1px solid rgb(220, 150, 22);
     }
 
-    @media screen and (max-width:700px) {
+    @media screen and (max-width: 700px) {
         display: none;
     }
 }

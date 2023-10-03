@@ -1,10 +1,10 @@
 export interface IBook {
-    id: number,
-    title: string,
-    author: string,
-    image: string,
-    price: number,
-    categoryId: number,
+    id: number;
+    title: string;
+    author: string;
+    image: string;
+    price: number;
+    categoryId: number;
     description: string;
 }
 

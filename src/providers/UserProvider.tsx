@@ -14,17 +14,28 @@ type IOpenDropdownName = null | "searchDropdown" | "favoritesDropdown";
 
 export const UserContext = createContext<IUserContext>({
   isLogin: false,
-  setIsLogin: (active: boolean) => { return null },
+  setIsLogin: (active: boolean) => {
+    return null;
+  },
   user: {} as IUser,
-  setUser: (user: IUser) => { return null },
+  setUser: (user: IUser) => {
+    return null;
+  },
   openDropdownName: null,
-  setOpenDropdownName: (_active: IOpenDropdownName) => { return null }
+  setOpenDropdownName: (_active: IOpenDropdownName) => {
+    return null;
+  },
 });
 
 export const UserProvider = ({ children }: { children: React.ReactNode }) => {
-  const [user, setUser] = useState<IUser>(JSON.parse(localStorage.getItem("user") ?? "{}"));
-  const [isLogin, setIsLogin] = useState<boolean>(Boolean(localStorage.getItem("user")));
-  const [openDropdownName, setOpenDropdownName] = useState<IOpenDropdownName>(null);
+  const [user, setUser] = useState<IUser>(
+    JSON.parse(localStorage.getItem("user") ?? "{}")
+  );
+  const [isLogin, setIsLogin] = useState<boolean>(
+    Boolean(localStorage.getItem("user"))
+  );
+  const [openDropdownName, setOpenDropdownName] =
+    useState<IOpenDropdownName>(null);
 
   return (
     <UserContext.Provider

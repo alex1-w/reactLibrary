@@ -1,4 +1,5 @@
 .mainBlock {
+    position: relative;
     display: flex;
     // border: 1px solid red;
 }
@@ -8,38 +9,10 @@
 }
 
 .sliderNavigation {
+    position: relative;
     display: flex;
     margin: 0 auto;
     gap: 60px;
     align-items: center;
     justify-content: center;
 }
-
-// .mainBlock {
-//     // width: 100%;
-//     // padding: 0 80px;
-//     display: flex;
-//     // border: 1px solid red;
-// }
-
-// .swiperBlock {
-//     width: 100%;
-//     // padding: 50px 60px;
-//     // padding: 3vw 10vh;
-//     // border: 3px solid;
-//     @media screen and (max-width:1000px) {
-
-//     }
-// }
-
-// .sliderNavigation {
-//     display: flex;
-//     width: fit-content;
-//     margin: 0 auto;
-//     gap: 60px;
-//     // border: 3px solid;
-
-//     align-items: center;
-//     justify-content: center;
-
-// }

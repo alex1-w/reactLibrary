@@ -45,17 +45,22 @@
 }
 
 .categoriesBlock {
-    // border: 1px solid red;
     width: fit-content;
     min-width: 200px;
     margin: 0 auto 10px;
 
-    & ul {
+    ul {
         display: flex;
         gap: 15px;
 
-        & li {
+        li {
             cursor: pointer;
+            transition: 0.2s scale;
+
+            &:hover {
+                scale: 1.1;
+                transition: 0.2s scale;
+            }
         }
     }
 
@@ -100,14 +105,7 @@
 
     }
 
-    &__btnArrow {
-        &.arrowRotate {
-            // transform: rotate(90deg);
-        }
-    }
-
     &__btnsBlock {
-        // border: 1px solid red;
         display: flex;
         gap: 20px;
         align-items: center;
@@ -140,7 +138,5 @@
             border-radius: 8px;
             border: 2px solid rgb(114, 29, 29);
         }
-
-
     }
 }

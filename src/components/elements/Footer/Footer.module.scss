@@ -1,6 +1,7 @@
 footer {
     background-color: #391F00;
     width: 100%;
+
     @media screen and (max-width:320px) {}
 }
 
@@ -84,9 +85,8 @@ footer {
 }
 
 .phoneCall {
-    // border: 3px solid red;
 
-    & p {
+    p {
         font-style: normal;
         font-weight: 900;
         font-size: 12px;
@@ -94,13 +94,13 @@ footer {
         color: #FFFFFF;
     }
 
-    & button {
+    button {
         background-color: inherit;
         border: 2px solid #E16A00;
         padding: 4px 8px;
         transition: all 0.3s;
 
-        & p {
+        p {
             transition: all 0.3s;
             color: #E16A00;
             line-height: 100%;

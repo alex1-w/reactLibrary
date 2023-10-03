@@ -9,9 +9,8 @@
     background-color: white;
     border-radius: 15px;
 
-    & input {
+    input {
         border: 1px solid rgb(1, 1, 113);
-        // transform: translateY(5px);
         box-shadow: inset 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
         padding: 14px 10px;
         border-radius: 10px;
@@ -24,14 +23,19 @@
     display: flex;
     gap: 10px;
 
-    & button {
+    button {
         background-color: inherit;
         border: none;
         cursor: pointer;
-        transition: color 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
 
         & p {
             font-size: 18px;
+        }
+
+        &:hover {
+            transition: 0.2s;
+            scale: 1.2;
         }
     }
 }

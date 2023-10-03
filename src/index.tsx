@@ -1,20 +1,19 @@
-import ReactDom from 'react-dom'
-import React from 'react';
-import { BrowserRouter, HashRouter } from 'react-router-dom'
-import ReactDOM from 'react-dom/client';
-import './index.scss';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import { HashRouter } from "react-router-dom";
+import ReactDOM from "react-dom/client";
+import "./index.scss";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 
 root.render(
   <React.StrictMode>
     <HashRouter>
       <App />
-    </HashRouter> 
+    </HashRouter>
   </React.StrictMode>
 );
 

@@ -68,6 +68,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: 0.2s all;
+
+    &:hover {
+        transition: 0.2s all;
+        background-color: rgba(4, 151, 174, 0.646);
+    }
 
     & p {
         line-height: 15px;
@@ -87,26 +93,24 @@
     }
 }
 
-.restFavoritesBlock {
+
+.restFavorites {
     width: fit-content;
     margin: 0 auto;
     margin-top: 5px;
 
-    &__restFavorites {
+    & div {
+        display: flex;
+        align-items: center;
+        gap: 5px;
 
-        & div {
-            display: flex;
-            align-items: center;
-            gap: 5px;
+        & p {
+            transition: color 0.2s ease-in;
+            color: white;
 
-            & p {
+            &:hover {
                 transition: color 0.2s ease-in;
-                color: white;
-
-                &:hover {
-                    transition: color 0.2s ease-in;
-                    color: aqua;
-                }
+                color: aqua;
             }
         }
     }

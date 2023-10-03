@@ -197,8 +197,14 @@ body {
         align-items: center;
         box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.25);
         z-index: 3;
+        transition: 0.2s scale;
 
-        & p {
+        &:hover {
+            transition: 0.2s scale;
+            scale: 1.1;
+        }
+
+        p {
             font-style: normal;
             font-weight: 700;
             font-size: 14px;
